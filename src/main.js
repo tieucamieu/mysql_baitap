@@ -9,7 +9,8 @@ server.use(bodyParser.json())
 
 import {connect} from './mysql.js'
 connect();
-
+import cors from 'cors'
+server.use(cors())
 /* APi Load */
 import api from './routes/index.js'
 server.use("/api", api)
